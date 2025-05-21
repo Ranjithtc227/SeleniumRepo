@@ -11,6 +11,7 @@ public class Base {
         driver=new ChromeDriver();
     	driver.get("https://selenium.qabible.in/");
     	driver.manage().window().maximize();
+    	
     }
 	
 	public void driverQuit() {

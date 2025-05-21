@@ -1,5 +1,7 @@
 package testscript;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -32,6 +34,17 @@ public class TableHandling extends Base
 
 	   System.out.println(element.getText());
    }
+   
+   public void column()
+   {
+	  driver.navigate().to("https://selenium.qabible.in/table-pagination.php");
+	  List<WebElement> colm=driver.findElements(By.xpath("//table[@id='dtBasicExample']/tbody/tr/td[5]"));
+      for(WebElement list:colm)
+      {
+	   System.out.println(list.getText());
+	   
+	  }
+   }
 	
 	public static void main(String[] args) 
 	{
@@ -40,7 +53,7 @@ public class TableHandling extends Base
 		//tablehandling.tablePrinting();
 		tablehandling.row();
 		//tablehandling.cell();
-		
+		tablehandling.column();
 	}
 	
 
