@@ -14,9 +14,12 @@ public class MultipleWindowHandling extends Base{
 		contactus.click();
 		WebElement login=driver.findElement(By.xpath("//h1[text()=\'LOGIN PORTAL\']")); 
         login.click();
+        
         String parenthandle=driver.getWindowHandle();
         System.out.println(parenthandle);
+        
         System.out.println("* * * * * * * * * * * * * * * * *");
+        
         Set<String> childhandle=driver.getWindowHandles();
         for(String set:childhandle)
         {

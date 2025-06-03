@@ -10,8 +10,8 @@ public class BrowserCommands extends Base{
 			//System.out.println(title);
 			//String url=driver.getCurrentUrl();
 			//System.out.println(url);
-			String pagesourse=driver.getPageSource();
-			System.out.println(pagesourse);
+			String pagesource=driver.getPageSource();
+			System.out.println(pagesource);
 		}
 		public static void main(String[] args)
 		{

@@ -26,7 +26,6 @@ public class CssSelector extends Base
 		/*                   Syntax-    tag.class                         */
 		
 		WebElement element1=driver.findElement(By.cssSelector("input.form-check-input"));   
-		WebElement element2=driver.findElement(By.cssSelector("input.form-control"));
 		WebElement element3=driver.findElement(By.cssSelector("span.input-group-text"));
 		WebElement element4=driver.findElement(By.cssSelector("span.carousel-control-next-icon"));
 		WebElement element5=driver.findElement(By.cssSelector("span.carousel-control-prev-icon"));

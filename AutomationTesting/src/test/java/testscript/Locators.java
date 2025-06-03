@@ -11,11 +11,11 @@ public class Locators extends Base {
 	 
 	   /* Syntax---  WebElement elementname=driver.findElement(By.locator("locatorvalue")); */
 	   
-	   WebElement element=driver.findElement(By.id("single-input-field"));
-	   element.sendKeys("Test");
+	   WebElement entermessage=driver.findElement(By.id("single-input-field"));
+	   entermessage.sendKeys("Test");
 	   
-	   WebElement buttonnname=driver.findElement(By.id("button-one"));
-	   buttonnname.click(); 
+	   WebElement showmsg=driver.findElement(By.id("button-one"));
+	   showmsg.click(); 
 	   
 	   WebElement elementid1=driver.findElement(By.id("value-a"));
 	   WebElement elementid2=driver.findElement(By.id("value-b"));
@@ -23,7 +23,7 @@ public class Locators extends Base {
    }
 	public void className()
 	{
-		 WebElement elementclassname1=driver.findElement(By.className("form-control datepicker"));
+		 WebElement enterdate=driver.findElement(By.className("form-control datepicker"));
 		 WebElement elementclassname2=driver.findElement(By.className("ui-datepicker-month"));
 		 WebElement elementclassname3=driver.findElement(By.className("btn moveall btn-outline-secondary"));
 
@@ -37,17 +37,22 @@ public class Locators extends Base {
 	}
 	public void linkText()
 	{
+		driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
+		WebElement ajaxformsubmit=driver.findElement(By.linkText("Ajax Form Submit"));
+		ajaxformsubmit.click();
 		
-		WebElement elementlinktext1=driver.findElement(By.linkText("Radio Buttons Demo"));
-		WebElement elementlinktext2=driver.findElement(By.linkText("Ajax Form Submit"));
-		WebElement elementlinktext3=driver.findElement(By.linkText("Checkbox Demo"));
+		//WebElement elementlinktext1=driver.findElement(By.linkText("Radio Buttons Demo"));
+		//WebElement elementlinktext3=driver.findElement(By.linkText("Checkbox Demo"));
 
 	}
 	public void partialLinkText()
 	{
-		WebElement elementpartiallinktext1=driver.findElement(By.partialLinkText("Radio Buttons"));
-		WebElement elementpartiallinktext2=driver.findElement(By.partialLinkText("Form Submit"));
-		WebElement elementpartiallinktext3=driver.findElement(By.partialLinkText("Checkbox"));
+		driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
+        WebElement radiobuttondemo=driver.findElement(By.partialLinkText("Radio Buttons"));
+		radiobuttondemo.click();
+		
+		//WebElement elementpartiallinktext2=driver.findElement(By.partialLinkText("Form Submit"));
+		//WebElement elementpartiallinktext3=driver.findElement(By.partialLinkText("Checkbox"));
 
 	}
 	public static void main(String[] args) 
@@ -55,11 +60,12 @@ public class Locators extends Base {
 		
 		Locators locators=new Locators();
 		locators.browserInitialisation();
-		locators.id();
-		locators.name();
-		locators.className();
-		locators.linkText();
+		//locators.id();
+		//locators.name();
+		//locators.className();
+		//locators.linkText();
 		locators.partialLinkText();
+		//locators.driverQuit();
 	}
 
 }

@@ -5,7 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class DropDownHandling extends Base
-{
+{       
+	
+	/*      selectByVisibleText           selectByValue     selectByIndex         */
+	
     public void dropDown()
     {
     	driver.navigate().to("https://selenium.qabible.in/select-input.php");

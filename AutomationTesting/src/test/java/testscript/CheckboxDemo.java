@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class CheckboxDemo extends Base{
 
-	public void testCheckboxDemo()
+	//public void testCheckboxDemo()
 	{
     	driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
 		WebElement elementlinktext1=driver.findElement(By.linkText("Checkbox Demo"));
@@ -26,7 +26,8 @@ public class CheckboxDemo extends Base{
 	{
 		driver.navigate().to("https://selenium.qabible.in/check-box-demo.php");
 		WebElement checkbox=driver.findElement(By.id("gridCheck"));
-  if(checkbox.isSelected())
+		
+  if(checkbox.isSelected())         //   isEnabled()  ,   isDisplayed()
   {
 	  System.out.println("Checkbox is selected");
   }
@@ -42,6 +43,7 @@ public class CheckboxDemo extends Base{
 		checkboxdemo.browserInitialisation();
 		//checkboxdemo.testCheckboxDemo();
 		checkboxdemo.checkBoxTest();
+		checkboxdemo.driverQuit();
 	}
 
 }
